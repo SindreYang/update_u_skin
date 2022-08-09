@@ -114,15 +114,16 @@ class MainWindow(MyWidget):
         :return:
         """
         # 绘制左上角、左下角、右上角、右下角、上、下、左、右边框
-        self.pixmaps = list()
-        self.pixmaps.append(str("./ico/frame/left_top.png"))
-        self.pixmaps.append(str("./ico/frame/left_bottom.png"))
-        self.pixmaps.append(str("./ico/frame/right_top.png"))
-        self.pixmaps.append(str("./ico/frame/right_bottom.png"))
-        self.pixmaps.append(str("./ico/frame/top_mid.png"))
-        self.pixmaps.append(str("./ico/frame/bottom_mid.png"))
-        self.pixmaps.append(str("./ico/frame/left_mid.png"))
-        self.pixmaps.append(str("./ico/frame/right_mid.png"))
+        self.pixmaps = [
+            "./ico/frame/left_top.png",
+            "./ico/frame/left_bottom.png",
+            "./ico/frame/right_top.png",
+            "./ico/frame/right_bottom.png",
+            "./ico/frame/top_mid.png",
+            "./ico/frame/bottom_mid.png",
+            "./ico/frame/left_mid.png",
+            "./ico/frame/right_mid.png",
+        ]
 
         painter.drawPixmap(0, 0, self.SHADOW_WIDTH, self.SHADOW_WIDTH, QPixmap(self.pixmaps[0]))  # 左上角
         painter.drawPixmap(self.width() - self.SHADOW_WIDTH, 0, self.SHADOW_WIDTH, self.SHADOW_WIDTH,

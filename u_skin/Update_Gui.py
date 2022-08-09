@@ -67,7 +67,7 @@ class Local:
                 file_name = rec.match(i).group()
         print('正在运行最新版本的LeagueSkin.')
         try:
-            win32api.ShellExecute(0, 'open', '%s' % file_name, '', '', 1)
+            win32api.ShellExecute(0, 'open', f'{file_name}', '', '', 1)
         except:
             print('权限不足.')
 
@@ -156,8 +156,8 @@ if __name__ == '__main__':
     b = Network()
     b.get_network_version()
 
-    print('当前版本:%s' % a.version)
-    print('服务器版本:%s' % b.version)
+    print(f'当前版本:{a.version}')
+    print(f'服务器版本:{b.version}')
 
     if a.version == b.version:
         print('无需更新.',type(a.version))

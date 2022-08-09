@@ -144,8 +144,8 @@ if __name__ == '__main__':
     b = Network()
     b.get_network_version()
 
-    print('当前版本:%s' % a.version)
-    print('服务器版本:%s' % b.version)
+    print(f'当前版本:{a.version}')
+    print(f'服务器版本:{b.version}')
 
     if a.version == b.version:
         print('无需更新.')
